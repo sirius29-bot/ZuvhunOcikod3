@@ -1,16 +1,22 @@
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
-const question = document.querySelector(".question");
+const questions = document.querySelectorAll(".question"); // Selects both h2 and h3
 const gif = document.querySelector(".gif");
 
-// Change text and gif when the Yes button is clicked
+// Change text and hide h3 when Yes button is clicked
 yesBtn.addEventListener("click", () => {
-    question.innerHTML = "YAAYYYYYY би ч бас чамд хайртайя❤️ Охин хүүхдэд амьдралдаа анх удаа хэлсэн таван жилийн өмнөх энэ үгийг зөвхөн чамд л хязгаар үгүйгээр үргэлжүүлэн хэлье 僕のダーリン 💞💏";
-    gif.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWtwejdvc2NubHFjam83cDluaGw3bjA4dmhoY2R6cmx3Z2tidzc2MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WP1Z0FfnuMuXqPvDlj/giphy.gif";
+    questions[0].innerHTML = "YAAYYYYYY би ч бас чамд хайртайя❤️ Охин хүүхдэд амьдралдаа анх удаа хэлсэн таван жилийн өмнөх энэ үгийг зөвхөн чамд л хязгаар үгүйгээр үргэлжүүлэн хэлье 僕のダーリン 💞💏";
+    
+    // Hide the h3 element
+    questions[1].style.display = "none";
+
+    // Change the GIF
+    gif.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWtwejdvc2NubHFjam83cDluaGw3bjA4dmhoY2R6cmx3Z2tidzc2MCZlcD12MV9pbnRlcm5naWZfYnlfaWQmY3Q9Zw/WP1Z0FfnuMuXqPvDlj/giphy.gif";
 
     // Hide the No button
     noBtn.style.display = "none";
 });
+
 
 // Make the No button move randomly on hover
 noBtn.addEventListener("mouseover", () => {
