@@ -14,6 +14,7 @@ yesBtn.addEventListener("click", () => {
     gif.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWtwejdvc2NubHFjam83cDluaGw3bjA4dmhoY2R6cmx3Z2tidzc2MCZlcD12MV9pbnRlcm5naWZfYnlfaWQmY3Q9Zw/WP1Z0FfnuMuXqPvDlj/giphy.gif";
 
     // Hide the No button
+    yesBtn.style.display = "none";
     noBtn.style.display = "none";
 });
 
